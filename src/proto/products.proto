@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package product;
+
+service ProductService {
+  rpc Insert(InsertProductsRequest) returns (InsertProductsResponse) {};
+  rpc List(ListProductsRequest) returns (ListProductsResponse) {};
+}
+
+message Product {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  float pricing = 4;
+}
+
+message InsertProductsRequest {
+  string name = 1;
+  string description = 2;
+  float pricing = 3;
+}
+
+message InsertProductsResponse { Product product = 1; }
+
+message ListProductsRequest {}
+
+message ListProductsResponse { repeated Product products = 1; }
