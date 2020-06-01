@@ -1,0 +1,19 @@
+{
+  "name": "template_js_nodemon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "server": "ts-node-dev --respawn --transpileOnly src/server/index.ts"
+  },
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.4",
+    "grpc": "^1.24.2",
+    "mongoose": "^5.9.16"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.7.21",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.9.3"
+  }
+}
