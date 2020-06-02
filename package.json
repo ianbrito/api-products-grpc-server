@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@grpc/proto-loader": "^0.5.4",
+    "dotenv": "^8.2.0",
     "grpc": "^1.24.2",
     "mongoose": "^5.9.16"
   },

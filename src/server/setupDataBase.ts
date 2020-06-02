@@ -2,7 +2,10 @@ import mongoose from "mongoose";
 
 function setupDataBase() {
   console.debug("[DataBase]: Iniciando");
-  mongoose.connect("mongodb://localhost:27017/grpc_server", {
+  
+  const { DB_URL } = process.env;
+
+  mongoose.connect(DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
